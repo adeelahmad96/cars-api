@@ -21,11 +21,6 @@ authRouter.post(
     .bail()
     .trim(),
   validator.body("lastName").optional().isString().bail().trim(),
-  validator
-    .body("password", "password does not exist")
-    .isString()
-    .bail()
-    .trim(),
   validator.body("email").isEmail().bail().trim(),
   validate,
   signup
